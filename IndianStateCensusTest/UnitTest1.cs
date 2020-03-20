@@ -40,5 +40,18 @@ namespace IndianStateCensusTest
                 Assert.AreEqual(ExceptionHandle.ExceptionType.CENSUS_FILE_PROBLEM, e.type);
             }
         }
+        [Test]
+        public void State_Census_Exception_Null()
+        {
+            try
+            {
+                Iteration obj1 = new Iteration();
+                obj1.CsvReader();
+            }
+            catch (ExceptionHandle e)
+            {
+                Assert.AreEqual(ExceptionHandle.ExceptionType.NO_SUCH_FEILD, e.type);
+            }
+        }
     }
 }
