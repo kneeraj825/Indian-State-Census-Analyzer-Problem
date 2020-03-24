@@ -4,17 +4,16 @@ using System.Text;
 
 namespace IndianState_Census_Analyzer_Problem
 {
-    class CsvFile
+    class CsvFileState
     {
         public string State { get; set; }
         public string Population { get; set; }
         public string AreaInSqKm { get; set; }
         public string DensityPerSqKm { get; set; }
-
-        public CsvFile CsvValue(string CsvLine)
+        public CsvFileState CsvValue(string CsvLine)
         {
             string[] values = CsvLine.Split(',');
-            CsvFile csvfile = new CsvFile();
+            CsvFileState csvfile = new CsvFileState();
             csvfile.State = Convert.ToString(values[0]);
             csvfile.Population = Convert.ToString(values[1]);
             csvfile.AreaInSqKm = Convert.ToString(values[2]);

@@ -1,4 +1,5 @@
 using IndianState_Census_Analyzer_Problem;
+using IndianStateCensusAnalyzerProblem;
 using NUnit.Framework;
 
 namespace IndianStateCensusTest
@@ -52,6 +53,13 @@ namespace IndianStateCensusTest
             {
                 Assert.AreEqual(ExceptionHandle.ExceptionType.NO_SUCH_FEILD, e.type);
             }
+        }
+        [Test]
+        public static void Total_Count_Of_Number_StateCode()
+        {
+            Iteration2 obj2 = new Iteration2();
+            int result = obj2.NumberOfCountState();
+            Assert.AreEqual(38, result);
         }
     }
 }

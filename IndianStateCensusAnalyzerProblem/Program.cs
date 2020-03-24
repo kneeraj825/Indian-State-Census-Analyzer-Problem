@@ -1,4 +1,5 @@
 ﻿using IndianState_Census_Analyzer_Problem;
+using IndianStateCensusAnalyzerProblem;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -19,9 +20,21 @@ namespace Indian_State_Test_Census_Problem
             {
                 Console.WriteLine(finalPrint);
             }
-            Iteration itr1 = new Iteration();
-            var finalCount = itr1.NumberOfCount();
-            Console.WriteLine("Final count is " + finalCount);
+            Iteration2 abs1 = new Iteration2();
+            IEnumerable<string> iterating1 = abs1.CsvReaderState();
+            foreach (string finalPrint1 in iterating1)
+            {
+                Console.WriteLine(finalPrint1);
+            }
+            Iteration itrating = new Iteration();
+            var finalCount = itrating.NumberOfCount();
+            Console.WriteLine("Final count of State Census Analyzer is " + finalCount);
+
+            Iteration2 itrating2 = new Iteration2();
+            var finalCount1 = itrating2.NumberOfCountState();
+            Console.WriteLine("Final count of State Code is " + finalCount1);
+            
+            
         }
     }
 

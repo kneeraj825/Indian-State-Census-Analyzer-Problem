@@ -28,8 +28,8 @@ namespace IndianState_Census_Analyzer_Problem
                 throw new ExceptionHandle(ExceptionHandle.ExceptionType.NO_SUCH_FEILD, "FILE_TYPE_INCORRECT");
             }
             string[] stateCensus = System.IO.File.ReadAllLines(path);
-            CsvFile csv = new CsvFile();
-            List<CsvFile> values = File.ReadAllLines(path).Select(v => csv.CsvValue(v))
+            CsvFileState csv = new CsvFileState();
+            List<CsvFileState> values = File.ReadAllLines(path).Select(v => csv.CsvValue(v))
                 .ToList();
 
 
@@ -40,8 +40,9 @@ namespace IndianState_Census_Analyzer_Problem
 
             }
         }
-        public int NumberOfCount()
-        {
+        
+            public int NumberOfCount()
+            {
             int cnt = 0;
             try
             {
@@ -57,27 +58,6 @@ namespace IndianState_Census_Analyzer_Problem
                 throw e;
             }
             return cnt++;
-         
-        }
-        /*public IEnumerable<string> DelimetiterFile()
-        {
-            string path;
-             path = "C:/ Users / NK / Downloads / StateCensusData.csv";
-            String line = "";
-            String cvsSplitBy = ",";
-            try (StreamReader br = new StreamReader(new FileReader(path)))
-            {
-                while ((line = br.readLine()) != null)
-                {
-                    // use comma as separator
-                    String[] country = line.Split(cvsSplitBy);
-                    Console.WriteLine("StateCensusData [code= " + country[4] + " , name=" + country[5] + "]");
-                }
             }
-            catch (ExceptionHandle e)
-            {
-               throw e;
-            }
-        }*/
-    }
+   } 
 }
